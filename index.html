@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Bateria virtual tocada com o mouse, o toque ou o teclado.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Alura MIDI</title>
@@ -18,31 +18,32 @@
 </head>
 <body>
 
-    <h1>Alura Midi</h1>
+    <h1>Alura MIDI</h1>
+    <p class="dica">Clique nas teclas ou use o teclado: <kbd>Q</kbd> <kbd>W</kbd> <kbd>E</kbd> / <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd> / <kbd>Z</kbd> <kbd>X</kbd> <kbd>C</kbd></p>
 
-    <section class="teclado">
-        <button class="tecla tecla_pom">Pom</button>
-        <button class="tecla tecla_clap">Clap</button>
-        <button class="tecla tecla_tim">Tim</button>
+    <section class="teclado" aria-label="Teclado da bateria">
+        <button class="tecla tecla_pom" data-tecla="Q">Pom<kbd>Q</kbd></button>
+        <button class="tecla tecla_clap" data-tecla="W">Clap<kbd>W</kbd></button>
+        <button class="tecla tecla_tim" data-tecla="E">Tim<kbd>E</kbd></button>
 
-        <button class="tecla tecla_puff">Puff</button>
-        <button class="tecla tecla_splash">Splash</button>
-        <button class="tecla tecla_toim">Toim</button>
+        <button class="tecla tecla_puff" data-tecla="A">Puff<kbd>A</kbd></button>
+        <button class="tecla tecla_splash" data-tecla="S">Splash<kbd>S</kbd></button>
+        <button class="tecla tecla_toim" data-tecla="D">Toim<kbd>D</kbd></button>
 
-        <button class="tecla tecla_psh">Psh</button>
-        <button class="tecla tecla_tic">Tic</button>
-        <button class="tecla tecla_tom">Tom</button>
+        <button class="tecla tecla_psh" data-tecla="Z">Psh<kbd>Z</kbd></button>
+        <button class="tecla tecla_tic" data-tecla="X">Tic<kbd>X</kbd></button>
+        <button class="tecla tecla_tom" data-tecla="C">Tom<kbd>C</kbd></button>
     </section>
 
-    <audio src="sounds/keyq.wav" id="som_tecla_pom"></audio>
-    <audio src="sounds/keyw.wav" id="som_tecla_clap"></audio>
-    <audio src="sounds/keye.wav" id="som_tecla_tim"></audio>
-    <audio src="sounds/keya.wav" id="som_tecla_puff"></audio>
-    <audio src="sounds/keys.wav" id="som_tecla_splash"></audio>
-    <audio src="sounds/keyd.wav" id="som_tecla_toim"></audio>
-    <audio src="sounds/keyz.wav" id="som_tecla_psh"></audio>
-    <audio src="sounds/keyx.wav" id="som_tecla_tic"></audio>
-    <audio src="sounds/keyc.wav" id="som_tecla_tom"></audio>
+    <audio preload="auto" src="sounds/keyq.wav" id="som_tecla_pom"></audio>
+    <audio preload="auto" src="sounds/keyw.wav" id="som_tecla_clap"></audio>
+    <audio preload="auto" src="sounds/keye.wav" id="som_tecla_tim"></audio>
+    <audio preload="auto" src="sounds/keya.wav" id="som_tecla_puff"></audio>
+    <audio preload="auto" src="sounds/keys.wav" id="som_tecla_splash"></audio>
+    <audio preload="auto" src="sounds/keyd.wav" id="som_tecla_toim"></audio>
+    <audio preload="auto" src="sounds/keyz.wav" id="som_tecla_psh"></audio>
+    <audio preload="auto" src="sounds/keyx.wav" id="som_tecla_tic"></audio>
+    <audio preload="auto" src="sounds/keyc.wav" id="som_tecla_tom"></audio>
 
     <script src="main.js"></script>
 </body>

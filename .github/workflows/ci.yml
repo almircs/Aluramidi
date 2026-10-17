@@ -1,0 +1,26 @@
+name: Verificação
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  links:
+    name: Arquivos e links internos
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      # Confere se toda imagem, script, folha de estilo, mídia e link
+      # interno das páginas aponta para um arquivo que existe no repositório.
+      - name: Verificar referências locais
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: --offline --no-progress './**/*.html'
+          fail: true
